@@ -25,10 +25,6 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
@@ -64,9 +60,8 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-test</artifactId>
-            <scope>test</scope>
-        </dependency>
+            <artifactId>spring-security-crypto</artifactId>
+            <version>3.1.0.RELEASE</version> </dependency>
     </dependencies>
 
     <build>
@@ -145,31 +140,32 @@
                     <artifactId>junit-platform-launcher</artifactId>
                     <scope>test</scope>
                 </dependency>
+
             </dependencies>
             <build>
                 <plugins>
-                    <plugin>
-                        <groupId>org.graalvm.buildtools</groupId>
-                        <artifactId>native-maven-plugin</artifactId>
-                        <version>${native-buildtools.version}</version>
-                        <extensions>true</extensions>
-                        <executions>
-                            <execution>
-                                <id>test-native</id>
-                                <phase>test</phase>
-                                <goals>
-                                    <goal>test</goal>
-                                </goals>
-                            </execution>
-                            <execution>
-                                <id>build-native</id>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>build</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
+<!--                    <plugin>-->
+<!--                        <groupId>org.graalvm.buildtools</groupId>-->
+<!--                        <artifactId>native-maven-plugin</artifactId>-->
+<!--                        <version>${native-buildtools.version}</version>-->
+<!--                        <extensions>true</extensions>-->
+<!--                        <executions>-->
+<!--                            <execution>-->
+<!--                                <id>test-native</id>-->
+<!--                                <phase>test</phase>-->
+<!--                                <goals>-->
+<!--                                    <goal>test</goal>-->
+<!--                                </goals>-->
+<!--                            </execution>-->
+<!--                            <execution>-->
+<!--                                <id>build-native</id>-->
+<!--                                <phase>package</phase>-->
+<!--                                <goals>-->
+<!--                                    <goal>build</goal>-->
+<!--                                </goals>-->
+<!--                            </execution>-->
+<!--                        </executions>-->
+<!--                    </plugin>-->
                 </plugins>
             </build>
         </profile>
